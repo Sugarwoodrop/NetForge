@@ -1,6 +1,6 @@
 # Build
-build/
-cmake-build-*/
+/build/
+/cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 Makefile
@@ -13,9 +13,10 @@ compile_commands.json
 *.so
 *.out
 
-# Debug
-core
-core.*
+# Core dumps
+/core
+/core.*
+core.[0-9]*
 
 # IDE
 .idea/
