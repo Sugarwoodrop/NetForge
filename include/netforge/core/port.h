@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "link.h"
+#include "../logger/logger.h"
 
 typedef struct NIC nic_t;
 
@@ -21,6 +22,6 @@ void take_on_link(port_t* port, link_t* link);
 void take_off_link(port_t* port);
 
 int port_transmit(port_t* port, uint8_t* data, size_t len);
-int port_receive(port_t* port, uint8_t* data, size_t len);
+void port_receive(port_t* port, uint8_t* data, size_t len);
 
 #endif //NETFORGE_CORE_JACK_H

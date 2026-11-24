@@ -1,9 +1,8 @@
 # Build
-/build/
+/build*/
 /cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
-Makefile
 cmake_install.cmake
 compile_commands.json
 
@@ -12,11 +11,18 @@ compile_commands.json
 *.a
 *.so
 *.out
+*.d
+
+# Binary (если вдруг собрал прямо в корне)
+/netforge
 
 # Core dumps
 /core
 /core.*
 core.[0-9]*
+
+# clangd
+.cache/
 
 # IDE
 .idea/

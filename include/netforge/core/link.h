@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include "../logger/logger.h"
 
 typedef struct Port port_t;
 

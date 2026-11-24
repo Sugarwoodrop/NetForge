@@ -4,7 +4,7 @@
 #include "nic.h"
 #include "../net/netstack.h"
 #include "../protocols/ethernet.h"
-// Базовый тип устройства, от которого будут наследоваться все остальные типы устройств
+#include "../logger/logger.h"
 
 typedef struct Device{
     nic_t* nic; // Массив сетевых интерфейсов устройства
@@ -15,7 +15,7 @@ typedef struct Device{
 int init_device(device_t* device, uint8_t size_nic);
 void destroy_device(device_t* device);
 
-int ping(device_t* tx_device, uint8_t* data, size_t len, mac_t dst_mac);
-int device_receive(device_t* rx_device);
+int ping(device_t* tx_device, uint8_t* data, size_t len, ipv4_t dst_ip);
+void device_receive(void *ctx);
 
 #endif //NETFORGE_CORE_DEVICE_H

@@ -19,3 +19,6 @@ target_include_directories(netforge PRIVATE
 target_link_libraries(netforge PRIVATE
     PkgConfig::NOTCURSES
 )
+
+target_compile_options(netforge PRIVATE -g -fsanitize=address,undefined -fno-omit-frame-pointer)
+target_link_options(netforge PRIVATE -fsanitize=address,undefined)
